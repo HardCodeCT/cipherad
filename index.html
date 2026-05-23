@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="cipherlogo.png" />
+  <title>CiPHER Real-Time Chess Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Background grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo"><img src="cipherlogo.png" alt="CiPHER logo" class="nav-logo-img" />Ci<span class="accent">PH</span>ER</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#extension">Extension</a></li>
+      </ul>
+      <a href="https://cipherproject-umber.vercel.app/" class="nav-cta">Visit Main Site</a>
+    </div>
+  </nav>
+
+
+  <!-- ABOUT / STORY -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">Avoidance Doesn't<br/><span class="accent">Make You Better</span></h2>
+
+      <div class="story-grid">
+        <div class="story-text">
+          <p>
+            Every chess player has positions they dread. For me, it was the Sicilian. I'd avoid it, play something passive, never actually learn.
+          </p>
+          <p>
+            What I needed was to face it repeatedly with real-time feedback not post-game analysis where I'd already internalized the wrong move, but <strong>in the moment</strong>, seeing the engine's suggested line while I'm still feeling the pressure.
+          </p>
+          <p>
+            That's deliberate practice. That's exposure therapy.
+          </p>
+          <div class="story-disclaimer">
+            <span class="disclaimer-icon">⚠</span>
+            This tool is designed for unrated and casual training games. Use during rated play violates fair play policies.
+          </div>
+        </div>
+        <div class="story-quote-block">
+          <blockquote>
+            "Practice the positions<br/>you're scared of <br/><em>in real time.</em>"
+          </blockquote>
+          <div class="quote-attr">— The CiPHER philosophy</div>
+
+          <!-- Activate Engine CTA — always visible -->
+          <div class="activate-block" id="activateBlock">
+            <p class="activate-prompt" id="activatePrompt">
+              <span class="activate-icon">⚡</span>
+              <span>Click the page once to activate the engine</span>
+            </p>
+            <p class="activate-note">your click supports development costs</p>
+          </div>
+
+          <!-- Ad slot — always visible -->
+          <div class="ad-slot" id="adSlot" aria-label="Advertisement">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-placeholder">
+              <!-- Replace this div's contents with your real ad tag (Google AdSense, etc.) -->
+              <div class="ad-inner">
+                <span class="ad-icon">📢</span>
+                <div>
+                  <strong>Support CiPHER</strong>
+                  <p>Ads keep this tool free and the engine running.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visit main site -->
+          <a href="https://cipherproject-umber.vercel.app/" target="_blank" rel="noopener noreferrer" class="visit-main-link">
+            <span>Visit Main Site</span>
+            <span class="visit-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <h2 class="section-title">Built for<br/><span class="accent">Deliberate Practice</span></h2>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Real-Time Engine Overlay</h3>
+          <p>See the engine's suggested line as you're deciding — not after the damage is done. Stay in the pressure zone and learn from it.</p>
+        </div>
+
+        <div class="feature-card feature-card--highlight">
+          <div class="feature-icon">🎯</div>
+          <h3>Position Targeting</h3>
+          <p>Select any feared opening or middlegame structure. CiPHER steers you into it repeatedly until the position becomes comfortable.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Exposure Training Mode</h3>
+          <p>Systematic desensitisation to positions that spike your anxiety. Face them enough times and fear transforms into pattern recognition.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>In-Game Feedback</h3>
+          <p>Immediate evaluation of every candidate move. Understand why a line fails while your intuition still remembers choosing it.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🖥️</div>
+          <h3>Cross-Platform</h3>
+          <p>Desktop apps for Windows, macOS and Linux. Native Android app. Browser extension for playing directly on chess sites.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Training-Only Mode</h3>
+          <p>Cipher is designed to comply with fair-use policy and is not intended for rated or competitive play. It functions strictly as a training tool and is architecturally built with ethical constraints, not as a cheat engine.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast notification — hidden until click -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">⚡</span>
+    <span id="toastMsg">Engine activated — happy training!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
